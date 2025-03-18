@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Survey Form</title>
-        <link rel="stylesheet" href="styles.css"/>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
 
-    <body>
-        <h1 id="title">Survey Form</h1>
-        <p id="description">A form to get people information</p>
-        <form id="survey-form">
+<body>
+    <h1 id="title">Survey Form</h1> 
+    <p id="description">A form to get people information</p>
+    <form id="survey-form">
+        <div>
+            <div id="container">
+                <label id="name-label" for="name">Name
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
+                </label>
+            </div>
+
             <div>
-                <div id="container">
-                    <label id="name-label" for="name" >Name:
-                        <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
-                    </label>
-                </div>
+                <label id="email-label" for="email">E-mail
+                    <input type="email" name="email" id="email" placeholder="e-mail" required>
+                </label>
+            </div>
 
-                <div>
-                    <label id="emial-label" for="email">E-mail:
-                        <input type="email" name="email" id="email" placeholder="e-mail" required>
-                    </label>
-                </div>
+            <div>
+                <label id="number-label" for="number">Age
+                    <input type="number" name="number" id="number" placeholder="age" min="16" max="120" required>
+                </label>
+            </div>
 
-                <div>
-                    <label id="number-label" for="number">Age:
-                        <input type="number" name="number" id="number" placeholder="age" min="16" max="120" required>
-                    </label>
-                </div>
-
-                <div id="dropdown-label" for="dropdown">
-                    <select id="dropdown">
+            <div>
+                <label id="dropdown-label" for="dropdown">Gender
+                    <select id="dropdown" name="gender">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
-                </div>
-
+                </label>
             </div>
-        </form>
 
+            <div>
+                <p>Preferred Contact Method:</p>
+                <label>
+                    <input type="radio" name="contact" value="email" required>Email
+                </label>
+                <label>
+                    <input type="radio" name="contact" value="phone" required>Phone
+                </label>
+            </div>
 
-    </body>
+            <div>
+                <p>Interests:</p>
+                <label>
+                    <input type="checkbox" name="interests" value="coding">Coding
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="music">Music
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="sports">Sports
+                </label>
+            </div>
 
+            <div>
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+            </div>
 
+            <div>
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
 </html>
